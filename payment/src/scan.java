@@ -9,5 +9,13 @@
  * @author SCC-COLLEGE
  */
 class scan {
+
+    static void nextLine() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static int nextInt() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

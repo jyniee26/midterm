@@ -5,9 +5,10 @@ import java.util.Scanner;
 
 public class Payment {
 
-    private Scanner scan = new Scanner(System.in);
+    static Scanner scan = new Scanner(System.in);
 
-    public void paymentConfig() {
+    public static void main(String[] args) {
+        Payment pay = new Payment();
         int option;
         do {
             try {
@@ -24,16 +25,16 @@ public class Payment {
 
                 switch (option) {
                     case 1:
-                        addPayment();
+                        pay.addPayment();
                         break;
                     case 2:
-                        viewPayment();
+                        pay.viewPayment();
                         break;
                     case 3:
-                        editPayment();
+                        pay.editPayment();
                         break;
                     case 4:
-                        deletePayment();
+                        pay.deletePayment();
                         break;
                     case 5:
                         System.out.println("Exiting Payment Menu..");

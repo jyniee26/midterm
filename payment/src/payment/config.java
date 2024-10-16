@@ -34,7 +34,7 @@ public class config {
             return;
         }
 
-        try (Connection conn = Config.connectDB();
+        try (Connection conn = connectDB();
             PreparedStatement pstmt = conn.prepareStatement(sqlQuery);
             ResultSet rs = pstmt.executeQuery()) {        
             
@@ -78,7 +78,7 @@ public class config {
     }
     
     public void addRecord(String sql, Object... values) {
-    try (Connection conn = Config.connectDB(); // Use the connectDB method
+    try (Connection conn = connectDB(); // Use the connectDB method
          PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
         // Loop through the values and set them in the prepared statement dynamically
@@ -112,7 +112,7 @@ public class config {
 }
     
     public void updateRecord(String sql, Object... values) {
-        try (Connection conn = Config.connectDB(); // Use the connectDB method
+        try (Connection conn = connectDB(); // Use the connectDB method
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
             // Loop through the values and set them in the prepared statement dynamically
